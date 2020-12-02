@@ -14,32 +14,32 @@ A good event to train any skill in any Language or just for problem resolution t
 
 ## 💻 Days
 
-| Day | Problem | Resolution | Language |
-|-|-|-|-|
-| 01 | `Report Repair` | [Day 01](days/01) | `Javascript` |
-| 02 |  | [Day 02](days/02) | 
-| 03 |  | [Day 03](days/03) |
-| 04 |  | [Day 04](days/04) |
-| 05 |  | [Day 05](days/05) |
-| 06 |  | [Day 06](days/06) |
-| 07 |  | [Day 07](days/07) |
-| 08 |  | [Day 08](days/08) |
-| 09 |  | [Day 09](days/09) |
-| 10 |  | [Day 10](days/10) |
-| 11 |  | [Day 11](days/11) |
-| 12 |  | [Day 12](days/12) |
-| 13 |  | [Day 13](days/13) |
-| 14 |  | [Day 14](days/14) |
-| 15 |  | [Day 15](days/15) |
-| 16 |  | [Day 16](days/16) |
-| 17 |  | [Day 17](days/17) |
-| 18 |  | [Day 18](days/18) |
-| 19 |  | [Day 19](days/19) |
-| 20 |  | [Day 20](days/20) |
-| 21 |  | [Day 21](days/21) |
-| 22 |  | [Day 22](days/22) |
-| 23 |  | [Day 23](days/23) |
-| 24 |  | [Day 24](days/24) |
+| Day | Problem | Resolution | Language | Done |
+|-|-|-|-|-|
+| 01 | `Report Repair` | [Day 01](days/01) | `Javascript` | 🟢
+| 02 | `Password Philosophy` | [Day 02](days/02) | `Javascript` | 🔴
+| 03 |  | [Day 03](days/03) |  | 🔴
+| 04 |  | [Day 04](days/04) |  | 🔴
+| 05 |  | [Day 05](days/05) |  | 🔴
+| 06 |  | [Day 06](days/06) |  | 🔴
+| 07 |  | [Day 07](days/07) |  | 🔴
+| 08 |  | [Day 08](days/08) |  | 🔴
+| 09 |  | [Day 09](days/09) |  | 🔴
+| 10 |  | [Day 10](days/10) |  | 🔴
+| 11 |  | [Day 11](days/11) |  | 🔴
+| 12 |  | [Day 12](days/12) |  | 🔴
+| 13 |  | [Day 13](days/13) |  | 🔴
+| 14 |  | [Day 14](days/14) |  | 🔴
+| 15 |  | [Day 15](days/15) |  | 🔴
+| 16 |  | [Day 16](days/16) |  | 🔴
+| 17 |  | [Day 17](days/17) |  | 🔴
+| 18 |  | [Day 18](days/18) |  | 🔴
+| 19 |  | [Day 19](days/19) |  | 🔴
+| 20 |  | [Day 20](days/20) |  | 🔴
+| 21 |  | [Day 21](days/21) |  | 🔴
+| 22 |  | [Day 22](days/22) |  | 🔴
+| 23 |  | [Day 23](days/23) |  | 🔴
+| 24 |  | [Day 24](days/24) |  | 🔴
 
 ## 🎱 Other stuff
 

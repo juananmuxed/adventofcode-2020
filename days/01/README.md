@@ -37,7 +37,23 @@ In this list, the two entries that sum to 2020 are 1721 and 299. Multiplying the
 
 ## Resolution
 
-
+Using iterators (excluding the same number sum in the array) I check if the sum is `2020`
 
 ### Languages used
 - Javascript
+
+### Test
+
+Execute in console (in this folder):
+```
+node problem01.js
+```
+
+And return
+```
+[num1,num2]
+number num1*num2
+[num1,num2,num3]
+number num1*num2*num3
+```
+
