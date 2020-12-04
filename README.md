@@ -19,7 +19,7 @@ A good event to train any skill in any Language or just for problem resolution t
 | 01 | `Report Repair` | [Day 01](days/01) | `Javascript` | 🟢
 | 02 | `Password Philosophy` | [Day 02](days/02) | `Javascript` | 🟢
 | 03 | `Toboggan Trajectory` | [Day 03](days/03) | `Javascript` | 🟢
-| 04 |  | [Day 04](days/04) |  | 🔴
+| 04 | `Passport Processing` | [Day 04](days/04) | `Javascript` | 🟢
 | 05 |  | [Day 05](days/05) |  | 🔴
 | 06 |  | [Day 06](days/06) |  | 🔴
 | 07 |  | [Day 07](days/07) |  | 🔴
