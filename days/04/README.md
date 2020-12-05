@@ -55,6 +55,7 @@ According to the above rules, your improved system would report 2 valid passport
 Count the number of valid passports - those that have all required fields. Treat cid as optional. In your batch file, how many passports are valid?>
 
 __--- Part Two ---__
+
 The line is moving more quickly now, but you overhear airport security talking about how passports with invalid data are getting through. Better add some data validation, quick!
 
 You can continue to ignore the cid field, but each other field has strict rules about what values are valid for automatic validation:
