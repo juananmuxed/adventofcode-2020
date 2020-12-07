@@ -22,7 +22,7 @@ A good event to train any skill in any Language or just for problem resolution t
 | 04 | `Passport Processing` | [Day 04](days/04) | `Javascript` | 🟢
 | 05 | `Binary Boarding` | [Day 05](days/05) | `Javascript` | 🟢
 | 06 | `Custom Customs` | [Day 06](days/06) | `Javascript` | 🟢
-| 07 |  | [Day 07](days/07) |  | 🔴
+| 07 | `Handy Haversacks` | [Day 07](days/07) | `Javascript` | 🟢
 | 08 |  | [Day 08](days/08) |  | 🔴
 | 09 |  | [Day 09](days/09) |  | 🔴
 | 10 |  | [Day 10](days/10) |  | 🔴
