@@ -17,10 +17,10 @@ function searchBag(array,bag) {
 let count = 0;
 function searchContentBags(array,bag,multi) {
     array.forEach(e => {
-        if(e.split(' contain ')[0].match(bag) && e.split(' contain ')[1] != 'no other bags.') {
+        if(e.split(' contain ')[0].match(bag) && e.split(' contain ')[1].split(' ')[0] != 'no') {
             e.split(' contain ')[1].split(', ').forEach(x => {
                 count += x.split(' ')[0]*multi;
-                searchContentBags(array,x.split(' ')[1] + ' ' +  x.split(' ')[2],x.split(' ')[0]*multi);
+                searchContentBags(array,x.split(' ')[1] + ' ' +  x.split(' ')[2],x.split(' ')[0]);
             });
         }
     });
@@ -28,7 +28,11 @@ function searchContentBags(array,bag,multi) {
 }
 
 // LOGGING //
+console.time('Duration1')
 console.log('Searched bags options');
 console.log(searchBag(tray,'shiny gold')[0].filter((v, i, s) => s.indexOf(v) === i).length);
+console.timeEnd('Duration1')
+console.time('Duration2')
 console.log('Count bag childs');
 console.log(searchContentBags(tray,'shiny gold',1));
+console.timeEnd('Duration2')

@@ -39,7 +39,11 @@ function searchLastID(array) {
 }
 
 // LOGGING //
+console.time('Duration1')
 console.log('Largest ID');
 console.log(checkLargest(checkBoards(tray)));
+console.timeEnd('Duration1')
+console.time('Duration2')
 console.log('Your boarding ID');
 console.log(searchLastID(tray));
+console.timeEnd('Duration2')

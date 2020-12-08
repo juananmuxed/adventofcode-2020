@@ -53,8 +53,10 @@ function validateAll(array,validation) {
 }
 
 // LOGGING  //
+console.time('Duration1')
 const ret = validatePassports(tray,validations);
 console.log("All passwords with inputs required")
 console.log(ret[0])
 console.log("All valid password")
 console.log(ret[1])
+console.timeEnd('Duration1')

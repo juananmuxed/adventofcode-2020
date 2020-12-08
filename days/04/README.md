@@ -143,6 +143,8 @@ And return
 ```
 All passwords with inputs required
 (number)firstPartSolution
+Duration1: timeInMilisecs
 All valid password
 (number)secondPartSolution
+Duration2: timeInMilisecs
 ```

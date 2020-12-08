@@ -35,7 +35,11 @@ function getFrequency(string) {
 };
 
 // LOGGING //
+console.time('Duration1')
 console.log("Search Anyone Yes");
 console.log(searchCountQuestion(tray));
+console.timeEnd('Duration1')
+console.time('Duration2')
 console.log("Search Everyone Yes");
 console.log(searchCountQuestionAll(tray));
+console.timeEnd('Duration2')

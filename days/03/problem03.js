@@ -32,8 +32,11 @@ function nonDecimalSystemSusLast(system,number,minus) {
 }
 
 // FIRST PART //
+console.time('Duration1')
 console.log('First part solution')
 console.log(countTree(tray,'#',0,3,1,0));
+console.timeEnd('Duration1')
+console.time('Duration2')
 
 // DIFERENT COMBINATIONS //
 console.log('Combinations of Sloops')
@@ -51,3 +54,4 @@ countTree(tray,'#',0,3,1,0)*
 countTree(tray,'#',0,5,1,0)*
 countTree(tray,'#',0,7,1,0)*
 countTree(tray,'#',0,1,2,0)));
+console.timeEnd('Duration2')

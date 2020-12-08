@@ -94,9 +94,11 @@ And return
 ```
 First part solution
 (number)firstPartSolution
+Duration1: timeInMilisecs
 Combinations of Sloops
 (numbers)listOfCombinations
 Multiply of Combinations
 (number)secondPartSolution
+Duration2: timeInMilisecs
 
 ```

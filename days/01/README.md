@@ -57,9 +57,11 @@ Array of results 1:
 [num1,num2]
 Result 1
 multiplyResult1
+Duration1: timeInMilisecs
 Array of results 2:
 [num1,num2,num3]
 Result 2 
 multiplyResult2
+Duration2: timeInMilisecs
 ```
 

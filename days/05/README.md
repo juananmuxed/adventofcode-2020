@@ -77,6 +77,8 @@ And return
 ```
 Largest ID
 (number)firstPartSolution
+Duration1: timeInMilisecs
 Your boarding ID
 (number)secondPartSolution
+Duration2: timeInMilisecs
 ```

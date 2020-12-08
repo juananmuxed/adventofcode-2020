@@ -111,6 +111,8 @@ And return
 ```
 Search Anyone Yes
 (number)firstPartSolution
+Duration1: timeInMilisecs
 Search Everyone Yes
 (number)secondPartSolution
+Duration2: timeInMilisecs
 ```

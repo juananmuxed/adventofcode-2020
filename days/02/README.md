@@ -59,6 +59,8 @@ And return
 ```
 Number of passwords by number of occurrences
 (number)validPasswords1
+Duration1: timeInMilisecs
 Number of passwords by position
 (number)validPasswords2
+Duration2: timeInMilisecs
 ```

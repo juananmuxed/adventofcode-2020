@@ -93,6 +93,8 @@ And return
 ```
 Searched bags options
 (number)firstPartSolution
+Duration1: timeInMilisecs
 Count bag childs
 (number)secondPartSolution
+Duration2: timeInMilisecs
 ```

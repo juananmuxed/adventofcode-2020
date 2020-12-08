@@ -41,7 +41,11 @@ function checkPasswords(array) {
 }
 
 // LOGGING //
+console.time('Duration1')
 console.log("Number of passwords by number of occurrences");
 console.log(testPasswords(passwords));
+console.timeEnd('Duration1')
+console.time('Duration2')
 console.log("Number of passwords by position");
 console.log(checkPasswords(passwords));
+console.timeEnd('Duration2')

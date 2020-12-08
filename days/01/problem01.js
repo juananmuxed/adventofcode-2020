@@ -75,16 +75,18 @@ function mult3sum(array,sumObj) {
     }
 }
 
-// MULTIPLICATION => BEST INSIDE THE FUNCTION //
-let res01 = mult2sum(numbersString,2020);
-let res02 = mult3sum(numbersString,2020);
-
 // LOGGING //
+console.time('Duration1')
+let res01 = mult2sum(numbersString,2020);
 console.log("Array of results 1:");
 console.log(res01);
 console.log("Result 1");
 console.log(res01[0]*res01[1]);
+console.timeEnd('Duration1')
+console.time('Duration2')
+let res02 = mult3sum(numbersString,2020);
 console.log("Array of results 2:");
 console.log(res02);
 console.log("Result 2");
 console.log(res02[0]*res02[1]*res02[2]);
+console.timeEnd('Duration2')
