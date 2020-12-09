@@ -23,8 +23,8 @@ A good event to train any skill in any Language or just for problem resolution t
 | 05 | `Binary Boarding` | [Day 05](days/05) | `Javascript` | 🟢
 | 06 | `Custom Customs` | [Day 06](days/06) | `Javascript` | 🟢
 | 07 | `Handy Haversacks` | [Day 07](days/07) | `Javascript` | 🟢
-| 07 | `Handheld Halting` | [Day 08](days/08) | `Javascript` | 🟢
-| 09 |  | [Day 09](days/09) |  | 🔴
+| 08 | `Handheld Halting` | [Day 08](days/08) | `Javascript` | 🟢
+| 09 | `Encoding Error` | [Day 09](days/09) | `Javascript` | 🟢
 | 10 |  | [Day 10](days/10) |  | 🔴
 | 11 |  | [Day 11](days/11) |  | 🔴
 | 12 |  | [Day 12](days/12) |  | 🔴
