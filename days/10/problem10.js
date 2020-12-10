@@ -5,7 +5,7 @@ const string = fs.readFileSync(__dirname + '/input.txt').toString();
 // CONVERT TO ARRAY //
 const tray = string.split(/\n/g);
 
-// PREPARE LINKIN PARK //
+// PREPARE LINKEDIN PARK //
 function prepareLinkedinPark(array) {
     let copyCat = JSON.parse(JSON.stringify(array));
     copyCat.sort((a,b) => a-b);
@@ -13,7 +13,7 @@ function prepareLinkedinPark(array) {
     return copyCat;
 }
 
-// ADAPTER LINKIN PARK //
+// ADAPTER LINKEDIN PARK //
 function adapterLinkedinPark(array,minPlug,maxPlug) {
     let countMin = 0,countMax = 0;
     array.unshift(0);
@@ -25,7 +25,7 @@ function adapterLinkedinPark(array,minPlug,maxPlug) {
     return [countMax,countMin,countMax*countMin]
 }
 
-// ARRAGMENTS OF LINKIN PARKS //
+// ARRAGMENTS OF LINKEDIN PARKS //
 function arragmentsLinkedinParks(array) {
     let linkinParks = array.reduce((acc,curr) => {
         let linkedins = [acc[curr - 1], acc[curr - 2], acc[curr - 3]]
@@ -40,10 +40,10 @@ function arragmentsLinkedinParks(array) {
 
 // LOGGING //
 console.time('Duration 1');
-console.log('Invalid sum');
+console.log('Linkedin Park adapter');
 console.log(adapterLinkedinPark(prepareLinkedinPark(tray),1,3)[2]);
 console.timeEnd('Duration 1');
 console.time('Duration 2');
-console.log('Search the sums');
+console.log('Arragments for Linkedin Parks');
 console.log(arragmentsLinkedinParks(prepareLinkedinPark(tray)));
 console.timeEnd('Duration 2');
