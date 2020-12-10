@@ -27,6 +27,25 @@ function searchContiguousSum(array,err) {
     let testArray = [];
     for (let i = 0; i < array.length; i++) {
         if(parseInt(array[i]) < err[0]) {
+            let sum = 0;
+            let index = 0;
+            for (let x = i; x < array.length; x++) {
+                sum += parseInt(array[x]);
+                testArray[index] = parseInt(array[x]);
+                if(testArray.length > 1 && sum == err[0]) return [Math.min(...testArray),Math.max(...testArray),Math.min(...testArray) + Math.max(...testArray)];
+                index++;
+            }
+            sum = 0;
+            testArray = [];
+        };
+    }
+}
+
+// SEARCH CONTIGUOUS SUM NOT OPTIMICED //
+function searchContiguousSumNot(array,err) {
+    let testArray = [];
+    for (let i = 0; i < array.length; i++) {
+        if(parseInt(array[i]) < err[0]) {
             for (let x = i; x < array.length; x++) {
                 if(testArray.push(parseInt(array[x])) > 1 && testArray.reduce((a, b) => a + b, 0) == err[0]) return [Math.min(...testArray),Math.max(...testArray),Math.min(...testArray) + Math.max(...testArray)];
             }
@@ -36,11 +55,16 @@ function searchContiguousSum(array,err) {
 }
 
 // LOGGING //
-console.time('Duration1');
+console.time('Duration 1');
 console.log('Invalid sum');
 console.log(searchInvalidSumatory(tray,25)[0]);
-console.timeEnd('Duration1');
-console.time('Duration2');
+console.timeEnd('Duration 1');
+console.time('Duration 2');
 console.log('Search the sums');
 console.log(searchContiguousSum(tray,error)[2]);
-console.timeEnd('Duration2');
+console.timeEnd('Duration 2');
+// TESTING PERFORMANCE //
+console.time('Duration 3');
+console.log('Search the sums');
+console.log(searchContiguousSumNot(tray,error)[2]);
+console.timeEnd('Duration 3');
