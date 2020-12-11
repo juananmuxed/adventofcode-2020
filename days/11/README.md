@@ -10,7 +10,7 @@ Your plane lands with plenty of time to spare. The final leg of your journey is 
 
 By modeling the process people use to choose (or abandon) their seat in the waiting area, you're pretty sure you can predict the best place to sit. You make a quick map of the seat layout (your puzzle input).
 
-The seat layout fits neatly on a grid. Each position is either floor (.), an empty seat (L), or an occupied seat (#). For example, the initial seat layout might look like this:
+The seat layout fits neatly on a grid. Each position is either floor `(.)`, an empty seat `(L)`, or an occupied seat `(#)`. For example, the initial seat layout might look like this:
 
 ```
 L.LL.LL.LL
@@ -27,10 +27,10 @@ L.LLLLL.LL
 
 Now, you just need to model the people who will be arriving shortly. Fortunately, people are entirely predictable and always follow a simple set of rules. All decisions are based on the number of occupied seats adjacent to a given seat (one of the eight positions immediately up, down, left, right, or diagonal from the seat). The following rules are applied to every seat simultaneously:
 
-If a seat is empty (L) and there are no occupied seats adjacent to it, the seat becomes occupied.
-If a seat is occupied (#) and four or more seats adjacent to it are also occupied, the seat becomes empty.
+If a seat is empty `(L)` and there are no occupied seats adjacent to it, the seat becomes occupied.
+If a seat is occupied `(#)` and four or more seats adjacent to it are also occupied, the seat becomes empty.
 Otherwise, the seat's state does not change.
-Floor (.) never changes; seats don't move, and nobody sits on the floor.
+Floor `(.)` never changes; seats don't move, and nobody sits on the floor.
 
 After one round of these rules, every seat in the example layout becomes occupied:
 
@@ -215,17 +215,15 @@ LLL###LLL#
 #.L#LL#.L#
 ```
 
-Again, at this point, people stop shifting around and the seating area reaches equilibrium. Once this occurs, you count 26 occupied seats.
+Again, at this point, people stop shifting around and the seating area reaches equilibrium. Once this occurs, you count `26` occupied seats.
 
 Given the new visibility method and the rule change for occupied seats becoming empty, once equilibrium is reached, how many seats end up occupied?
 
 </blockquote>
 
-
-
 ## Resolution
 
-Dirty, TODO clean please
+A navegation into a matrix array
 
 ### Languages used
 - Javascript
@@ -239,10 +237,10 @@ node problem11.js
 
 And return
 ```
-Linkedin Park adapter
+Wachosky Matrix Seats
 (number)firstPartSolution
 Duration1: timeInMilisecs
-Arragments for Linkedin Parks
+Sionists
 (number)secondPartSolution
 Duration2: timeInMilisecs
 ```

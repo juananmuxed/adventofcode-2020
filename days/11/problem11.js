@@ -22,13 +22,10 @@ function checkMorfeo(array,empty,occuped) {
     for (let x = 0; x < array.length; x++) {
         for (let y = 0; y < array[x].length; y++) {
             if (array[x][y] != '.') {
-                let trini, raton;
                 if(niobe % 2 == 0) {
-                    trini = checkTrinity(array,x,y,occuped)
-                    if(trini) tanque[x][y] = occuped;
+                    if(checkTrinity(array,x,y,occuped,false)) tanque[x][y] = occuped;
                 } else {
-                    raton = checkRaton(array,x,y,occuped)
-                    if(raton) tanque[x][y] = empty;
+                    if(checkTrinity(array,x,y,occuped,true)) tanque[x][y] = empty;
                 }
             }
         }
@@ -38,37 +35,6 @@ function checkMorfeo(array,empty,occuped) {
     return checkMorfeo(tanque,empty,occuped);
 }
 
-// THE AGENT APEARS //
-function checkTrinity(array,x,y,occ) {
-    if(array[x][y] == occ || 
-        array[x][y - 1] == occ || 
-        (array[x - 1] && array[x - 1][y - 1] == occ) || 
-        (array[x - 1] && array[x - 1][y] == occ) || 
-        (array[x - 1] && array[x - 1] && array[x - 1][y + 1] == occ) || 
-        array[x][y + 1] == occ || 
-        (array[x + 1] && array[x + 1][y + 1] == occ) || 
-        (array[x + 1] && array[x + 1][y] == occ) || 
-        (array[x + 1] && array[x + 1][y - 1] == occ)) return false;
-    return true;
-}
-
-// THE AGENT ATTACK //
-function checkRaton(array,x,y,occ) {
-    let e = array[x][y],
-        cifra = 0;
-    if(e != occ) return false;
-    if(array[x][y - 1] == occ) cifra++;
-    if(array[x - 1] && array[x - 1][y - 1] == occ) cifra++;
-    if(array[x - 1] && array[x - 1][y] == occ) cifra++;
-    if(array[x - 1] && array[x - 1][y + 1] == occ) cifra++;
-    if(array[x][y + 1] == occ) cifra++;
-    if(array[x + 1] && array[x + 1][y + 1] == occ) cifra++;
-    if(array[x + 1] && array[x + 1][y] == occ) cifra++;
-    if(array[x + 1] && array[x + 1][y - 1] == occ) cifra++;
-    if(cifra >= 4) return true
-    return false;
-}
-
 // DEFEND SION //
 let thekid = 0;
 function checkMachines(array,empty,occuped) {
@@ -76,13 +42,10 @@ function checkMachines(array,empty,occuped) {
     for (let x = 0; x < array.length; x++) {
         for (let y = 0; y < array[x].length; y++) {
             if (array[x][y] != '.') {
-                let trini, raton;
                 if(thekid % 2 == 0) {
-                    trini = checkArquitecto(array,x,y,occuped,empty)
-                    if(trini) tanque[x][y] = occuped;
+                    if(checkArquitecto(array,x,y,occuped,empty,false)) tanque[x][y] = occuped;
                 } else {
-                    raton = checkOraculo(array,x,y,occuped,empty)
-                    if(raton) tanque[x][y] = empty;
+                    if(checkArquitecto(array,x,y,occuped,empty,true)) tanque[x][y] = empty;
                 }
             }
         }
@@ -92,156 +55,119 @@ function checkMachines(array,empty,occuped) {
     return checkMachines(tanque,empty,occuped);
 }
 
-// NEO REBIRTH //
-function checkArquitecto(array,x,y,occ,emp) {
-    let merovingio = (x,y) => {
-        if(array[x] && array[x][y] == occ) return [true,array[x][y]];
+// THE AGENT ATTACK //
+function checkTrinity(array,x,y,occ,sitDown) {
+    let cifra = 0
+    sion = false;
+    if(!sitDown && array[x][y] == occ) return false;
+    if(sitDown && array[x][y] != occ) return false;
+    if(array[x][y - 1] == occ) cifra++ , sion = true;
+    if(array[x - 1] && array[x - 1][y - 1] == occ) cifra++, sion = true;
+    if(array[x - 1] && array[x - 1][y] == occ) cifra++, sion = true;
+    if(array[x - 1] && array[x - 1][y + 1] == occ) cifra++, sion = true;
+    if(array[x][y + 1] == occ) cifra++, sion = true;
+    if(array[x + 1] && array[x + 1][y + 1] == occ) cifra++, sion = true;
+    if(array[x + 1] && array[x + 1][y] == occ) cifra++, sion = true;
+    if(array[x + 1] && array[x + 1][y - 1] == occ) cifra++, sion = true;
+    if(sitDown) {
+        if(cifra >= 4) return true;
         return false;
-    },
-    leftOcc = false,leftUpOcc = false,upOcc = false,rightUpOcc = false,rightOcc = false,rightDownOcc = false,downOcc = false,leftDownOcc = false;
-    if(merovingio(x,y)) return false;
-    for (let left = y - 1; left >= 0; left--) {
-        let check = merovingio(x,left)
-        if(check[1] == emp) break;
-        if(check[0]) {
-            leftOcc = true;
-            break;
-        };
+    } else {
+        if(sion) return false;
+        return true;
     }
-    for (let left = y - 1,up = x - 1; left >= 0 || up >= 0; left--,up--) {
-        let check = merovingio(up,left)
-        if(check[1] == emp) break;
-        if(check[0]) {
-            leftUpOcc = true;
-            break;
-        };
-    }
-    for (let up = x - 1; up >= 0; up--) {
-        let check = merovingio(up,y)
-        if(check[1] == emp) break;
-        if(check[0]) {
-            upOcc = true;
-            break;
-        };
-    }
-    for (let right = y + 1,up = x  - 1; right < array[x][y].length || up >= 0; right++,up--) {
-        let check = merovingio(up,right)
-        if(check[1] == emp) break;
-        if(check[0]) {
-            rightUpOcc = true;
-            break;
-        };
-    }
-    for (let right = y + 1; right < array[x][y].length; right++) {
-        let check = merovingio(x,right)
-        if(check[1] == emp) break;
-        if(check[0]) {
-            rightOcc = true;
-            break;
-        };
-    }
-    for (let right = y + 1,down = x + 1; right < array[x][y].length || down < array[x].length; right++,down++) {
-        let check = merovingio(down,right)
-        if(check[1] == emp) break;
-        if(check[0]) {
-            rightDownOcc = true;
-            break;
-        };
-    }
-    for (let down = x + 1; down < array[x].length; down++) {
-        let check = merovingio(down,y)
-        if(check[1] == emp) break;
-        if(check[0]) {
-            downOcc = true;
-            break;
-        };
-    }
-    for (let left = y - 1,down = x + 1; left >= 0 || down < array[x].length; left--,down++) {
-        let check = merovingio(down,left)
-        if(check[1] == emp) break;
-        if(check[0]) {
-            leftDownOcc = true;
-            break;
-        };
-    }
-    if(leftOcc || leftUpOcc || upOcc || rightUpOcc || rightOcc || rightDownOcc || downOcc || leftDownOcc) return false;
-    return true;
 }
 
-// NEO FIGHT //
-function checkOraculo(array,x,y,occ,emp) {
-    let merovingio = (x,y) => {
+// NEO REBIRTH //
+function checkArquitecto(array,x,y,occ,emp,sitDown) {
+    let limits = {l:0,u:0,r:array[x].length,d:array.length},
+    merovingio = (x,y) => {
         if(array[x] && array[x][y] == occ) return [true,array[x][y]];
-        return false;
+        return [false,array[x][y]];
     },
+    sion = false,
     countSionists = 0;
-    if(array[x][y] != occ) return false;
-    for (let left = y - 1; left >= 0; left--) {
+    if(!sitDown && array[x][y] == occ) return false;
+    if(sitDown && array[x][y] != occ) return false;
+    for (let left = y - 1; left >= limits.l; left--) {
         let check = merovingio(x,left)
         if(check[1] == emp) break;
         if(check[0]) {
+            sion = true;
             countSionists++;
             break;
         };
     }
-    for (let left = y - 1,up = x - 1; left >= 0 || up >= 0; left--,up--) {
+    for (let left = y - 1,up = x - 1; (left >= limits.l && up >= limits.u); left--,up--) {
         let check = merovingio(up,left)
         if(check[1] == emp) break;
         if(check[0]) {
+            sion = true;
             countSionists++;
             break;
         };
     }
-    for (let up = x - 1; up >= 0; up--) {
+    for (let up = x - 1; up >= limits.u; up--) {
         let check = merovingio(up,y)
         if(check[1] == emp) break;
         if(check[0]) {
+            sion = true;
             countSionists++;
             break;
         };
     }
-    for (let right = y + 1,up = x  - 1; right < array[x][y].length || up >= 0; right++,up--) {
+    for (let right = y + 1,up = x  - 1; (right < limits.r && up >= limits.u); right++,up--) {
         let check = merovingio(up,right)
         if(check[1] == emp) break;
         if(check[0]) {
+            sion = true;
             countSionists++;
             break;
         };
     }
-    for (let right = y + 1; right < array[x][y].length; right++) {
+    for (let right = y + 1; right < limits.r; right++) {
         let check = merovingio(x,right)
         if(check[1] == emp) break;
         if(check[0]) {
+            sion = true;
             countSionists++;
             break;
         };
     }
-    for (let right = y + 1,down = x + 1; right < array[x][y].length || down < array[x].length; right++,down++) {
+    for (let right = y + 1,down = x + 1; (right < limits.r && down < limits.d); right++,down++) {
         let check = merovingio(down,right)
         if(check[1] == emp) break;
         if(check[0]) {
+            sion = true;
             countSionists++;
             break;
         };
     }
-    for (let down = x + 1; down < array[x].length; down++) {
+    for (let down = x + 1; down < limits.d; down++) {
         let check = merovingio(down,y)
         if(check[1] == emp) break;
         if(check[0]) {
+            sion = true;
             countSionists++;
             break;
         };
     }
-    for (let left = y - 1,down = x + 1; left >= 0 || down < array[x].length; left--,down++) {
+    for (let left = y - 1,down = x + 1; (left >= limits.l && down < limits.d); left--,down++) {
         let check = merovingio(down,left)
         if(check[1] == emp) break;
         if(check[0]) {
+            sion = true;
             countSionists++;
             break;
         };
     }
-    if(countSionists >= 5) return true;
-    return false;
+    if(sitDown) {
+        if(countSionists >= 5) return true;
+        return false;
+    } else {
+        if(sion) return false;
+        return true;
+    }
 }
 
 // LOGGING //

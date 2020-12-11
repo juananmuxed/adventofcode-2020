@@ -27,7 +27,7 @@ A good event to train any skill in any Language or just for problem resolution t
 | 09 | `Encoding Error` | [Day 09](days/09) | `Javascript` | 🟢
 | 10 | `Adapter Array` | [Day 10](days/10) | `Javascript` | 🟢
 | 11 | `Seating System` | [Day 11](days/11) | `Javascript` | 🟢
-| 12 | `` | [Day 12](days/12) |  | 🔴
+| 12 |  | [Day 12](days/12) |  | 🔴
 | 13 |  | [Day 13](days/13) |  | 🔴
 | 14 |  | [Day 14](days/14) |  | 🔴
 | 15 |  | [Day 15](days/15) |  | 🔴
