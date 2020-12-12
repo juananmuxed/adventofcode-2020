@@ -1,5 +1,4 @@
 // INPUT //
-const { ok } = require('assert');
 const fs = require('fs');
 const string = fs.readFileSync(__dirname + '/input.txt').toString();
 

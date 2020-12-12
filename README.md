@@ -27,7 +27,7 @@ A good event to train any skill in any Language or just for problem resolution t
 | 09 | `Encoding Error` | [Day 09](days/09) | `Javascript` | 🟢
 | 10 | `Adapter Array` | [Day 10](days/10) | `Javascript` | 🟢
 | 11 | `Seating System` | [Day 11](days/11) | `Javascript` | 🟢
-| 12 |  | [Day 12](days/12) |  | 🔴
+| 12 | `Rain Risk` | [Day 12](days/12) | `Javascript` | 🟢
 | 13 |  | [Day 13](days/13) |  | 🔴
 | 14 |  | [Day 14](days/14) |  | 🔴
 | 15 |  | [Day 15](days/15) |  | 🔴
@@ -42,6 +42,9 @@ A good event to train any skill in any Language or just for problem resolution t
 | 24 |  | [Day 24](days/24) |  | 🔴
 
 ## 🎱 Other stuff
+
+### 🐞 Debug
+At this moment the initial function to read the `input.txt` has a variant, if you are in Mac the split is `/\n/g` and in windows `/\r\n/g`
 
 ### 💃🏻 Collaboration
 I make this __Faster__ as possible but if you are interested in Upgrade the code, any modification is welcome. Use [pullrequest](https://github.com/juananmuxed/adventofcode-2020/pulls) or [issues](https://github.com/juananmuxed/adventofcode-2020/issues). 
