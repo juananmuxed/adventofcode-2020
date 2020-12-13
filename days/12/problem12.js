@@ -3,7 +3,7 @@ const fs = require('fs');
 const string = fs.readFileSync(__dirname + '/input.txt').toString();
 
 // CONVERT TO ARRAY //
-const tray = string.split(/\r\n/g);
+const tray = string.split(/\n/g);
 
 // DRUNKEN SAILOR //
 function drunkenSailor(array,point,start) {
