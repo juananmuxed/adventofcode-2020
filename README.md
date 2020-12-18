@@ -32,8 +32,8 @@ A good event to train any skill in any Language or just for problem resolution t
 | 14 | `Docking Data` | [Day 14](days/14) | `Javascript` | 🟢
 | 15 | `Rambunctious Recitation` | [Day 15](days/15) | `Javascript` | 🟢
 | 16 | `Ticket Translation` | [Day 16](days/16) | `Javascript` | 🟢
-| 17 |  | [Day 17](days/17) |  | 🔴
-| 18 |  | [Day 18](days/18) |  | 🔴
+| 17 | `Conway Cubes` | [Day 17](days/17) | `Javascript` | 🟢
+| 18 | `Operation Order` | [Day 18](days/18) | `Javascript` | 🟢
 | 19 |  | [Day 19](days/19) |  | 🔴
 | 20 |  | [Day 20](days/20) |  | 🔴
 | 21 |  | [Day 21](days/21) |  | 🔴
